@@ -1,0 +1,64 @@
+
+<section class="workflow-section documents-section">
+    <div class="section-heading">
+        <div>
+            <h2>Regulatory Documents</h2>
+            <p>Upload files and extract their text for process analysis.</p>
+        </div>
+    </div>
+
+    <form id="upload-form" class="upload-form">
+        <label for="document-file">Choose a PDF or DOCX file (max 10 MB)</label>
+        <input
+            type="file"
+            id="document-file"
+            name="file"
+            accept=".pdf,.docx"
+            required
+        >
+        <button type="submit">Upload Document</button>
+    </form>
+
+    <p id="upload-message" role="status"></p>
+
+    <div class="documents-layout">
+        <div>
+            <h3>Available Documents</h3>
+            <div id="documents-list"></div>
+        </div>
+
+        <div class="document-preview">
+            <h3 id="preview-title">Document Text</h3>
+            <p id="preview-info">Select a document to view its extracted text.</p>
+            <pre id="document-text">No document selected.</pre>
+        </div>
+    </div>
+</section>
+
+<section class="workflow-section">
+    <div class="section-heading">
+        <div>
+            <h2>AI Assistant</h2>
+            <p>Ask questions about uploaded university documents.</p>
+        </div>
+    </div>
+
+    <div id="chat-messages" class="chat-messages">
+        <div class="chat-message assistant">
+            Hello! I am the University Digital Twin AI Assistant.
+            Ask me a question about your uploaded documents.
+        </div>
+    </div>
+
+    <form id="chat-form" class="chat-form">
+        <input
+            type="text"
+            id="chat-input"
+            placeholder="Ask a question..."
+            maxlength="2000"
+            required
+        >
+        <button type="submit">Send</button>
+    </form>
+</section>
+</main>

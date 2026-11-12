@@ -1,0 +1,147 @@
+
+.documents-section {
+    margin-bottom: 30px;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 12px;
+}
+
+.upload-form label {
+    font-weight: bold;
+}
+
+.upload-form input {
+    max-width: 100%;
+    padding: 10px 0;
+}
+
+.upload-form button,
+.document-actions button {
+    border: none;
+    border-radius: 8px;
+    padding: 11px 16px;
+    background: #4338ca;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.upload-form button {
+    align-self: flex-start;
+}
+
+.upload-form button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#upload-message {
+    overflow-wrap: anywhere;
+}
+
+.documents-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.document-item {
+    border: 1px solid #e2e8f0;
+    padding: 14px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+.document-item h4 {
+    margin: 0 0 8px;
+}
+
+.document-item p {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.document-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.document-actions .delete-document {
+    background: #b91c1c;
+}
+
+.document-preview {
+    min-width: 0;
+}
+
+.document-preview pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    max-height: 500px;
+    overflow-y: auto;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+@media (max-width: 750px) {
+    .documents-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 15px;
+    background: #f5f6fa;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.chat-message {
+    padding: 12px 15px;
+    border-radius: 10px;
+    max-width: 85%;
+    white-space: pre-wrap;
+    line-height: 1.5;
+}
+
+.chat-message.assistant {
+    background: white;
+    align-self: flex-start;
+}
+
+.chat-message.user {
+    background: #dce9ff;
+    align-self: flex-end;
+}
+
+.chat-form {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-form input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
